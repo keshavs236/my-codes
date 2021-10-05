@@ -1,0 +1,10 @@
+<?php
+if(isset($_POST['Submit'])){
+	if(!empty($_POST['check_list'])){
+		foreach($_POST['check_list'] as $s){
+			$query="delete from form_info where Name='$s';";
+			$result=mysqli_query($db,$query);
+		}
+	}
+}
+?>
